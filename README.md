@@ -40,6 +40,20 @@ Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép tru
 1.Tạo thư mục: ~/myapp
 2.Tạo web cá nhân
 <img width="1919" height="986" alt="image" src="https://github.com/user-attachments/assets/b10d18e3-bb70-4abc-ac3f-a1832f98bce1" />
+2.Cài container đã chạy
+<img width="1429" height="93" alt="image" src="https://github.com/user-attachments/assets/706b4c18-88e5-4591-90b9-68d7daecc39b" />
+3.Cấu hình nginx.conf
+<img width="1078" height="625" alt="image" src="https://github.com/user-attachments/assets/f7222c8b-654b-444b-86e8-555f6c60986a" />
+4. Sửa docker-compose.yml
+<img width="955" height="579" alt="image" src="https://github.com/user-attachments/assets/2ac5caea-e8e7-414d-8095-d10852f7e176" />
+5.Tạo web tĩnh
+<img width="718" height="442" alt="image" src="https://github.com/user-attachments/assets/c497d420-5029-41b0-bb9f-fb3f8fafa115" />
+6.Kiểm tra web tĩnh
+<img width="799" height="347" alt="image" src="https://github.com/user-attachments/assets/8250520b-23a1-4d76-96b3-a254132dc6fd" />
+
+
+http://localhost:8080
+
 
 
 
