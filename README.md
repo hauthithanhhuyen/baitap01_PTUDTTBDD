@@ -86,6 +86,8 @@ Sửa file
 <img width="1888" height="617" alt="image" src="https://github.com/user-attachments/assets/06089ea4-37b5-44e8-98c1-7e331409612b" />
 <img width="1916" height="617" alt="image" src="https://github.com/user-attachments/assets/a1558cc8-34a0-4426-aebf-45913c923a27" />
 <img width="909" height="594" alt="image" src="https://github.com/user-attachments/assets/f7636d6f-e818-4cde-b7a5-6147cebdb94a" />
+Chuyển sang
+<img width="1889" height="1044" alt="image" src="https://github.com/user-attachments/assets/1b998c6c-bbed-473d-9bcf-96f7ba5224e4" />
 
 
 
