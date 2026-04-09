@@ -50,10 +50,42 @@ Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép tru
 <img width="718" height="442" alt="image" src="https://github.com/user-attachments/assets/c497d420-5029-41b0-bb9f-fb3f8fafa115" />
 6.Kiểm tra web tĩnh
 <img width="799" height="347" alt="image" src="https://github.com/user-attachments/assets/8250520b-23a1-4d76-96b3-a254132dc6fd" />
-
-
 http://localhost:8080
-
+<img width="1891" height="934" alt="image" src="https://github.com/user-attachments/assets/140a79b2-52dc-4969-a2c5-a846381add33" />
+Tạo API và cấu hình
+<img width="778" height="347" alt="image" src="https://github.com/user-attachments/assets/c6ecdd73-a3d3-4c28-aaaa-6e4276b3abc7" />
+# D.tạo thư mục ./myapi
+<img width="1481" height="380" alt="image" src="https://github.com/user-attachments/assets/43d772d7-217e-4bd8-a5b4-c9287a1e6d1a" />
+1.Test Flask trực tiếp
+<img width="1005" height="347" alt="image" src="https://github.com/user-attachments/assets/95d99d6f-035a-4372-bb09-fb051beb3837" />
+2. Test qua nginx 
+<img width="1472" height="730" alt="image" src="https://github.com/user-attachments/assets/b99640f7-7126-44b9-8bea-b20e6be5ccc1" />
+ truy cập qua http://localhost:8080/api/funny
+<img width="737" height="358" alt="image" src="https://github.com/user-attachments/assets/1487f4f0-99da-4b37-81bf-035fee034273" />
+# E. Triển khai (level test) ứng dụng
+Tạo api trong nodered
+<img width="1624" height="804" alt="image" src="https://github.com/user-attachments/assets/e8078011-58de-4cce-a1b5-9683793edb86" />
+Test
+<img width="1228" height="517" alt="image" src="https://github.com/user-attachments/assets/f29ad29f-d0bc-4742-85ac-e6ba99144156" />
+<img width="1741" height="440" alt="image" src="https://github.com/user-attachments/assets/82805827-3367-4446-b4f6-26ab1d4fed8d" />
+# Sửa file ./myweb/index.html : thêm code html+js để sử dụng được api đã khai báo proxy_pass (thực ra là sử dụng nodered http_in hoặc sử dụng service myapi)
+Sửa file
+<img width="1437" height="677" alt="image" src="https://github.com/user-attachments/assets/fc2fa3ae-0aa8-4be3-8c19-878be9489341" />
+# chạy trên :http://localhost:8080
+<img width="1320" height="541" alt="image" src="https://github.com/user-attachments/assets/8f72a2f9-ecad-4f2c-a592-20e9c54aa258" />
+# F SỬA LỖI
+1.1. Kiểm tra container nhanh
+<img width="1472" height="273" alt="image" src="https://github.com/user-attachments/assets/0b2992e4-e9fd-4f05-90a5-5b42981e549a" />
+2. Thêm HEALTHCHECK cho myapi
+<img width="1407" height="902" alt="image" src="https://github.com/user-attachments/assets/3ead68aa-d31b-47f1-bda5-99df99354670" />
+Đã có đủ các dữ liệu đã cài thành công
+<img width="1843" height="172" alt="image" src="https://github.com/user-attachments/assets/55696aa6-83d0-49a2-8c99-8fe16206d538" />
+# G. Triển khai ứng dụng đến End-user
+1. Tạo Cloudflare Tunnel
+<img width="1639" height="640" alt="image" src="https://github.com/user-attachments/assets/5127b1b2-337d-460f-839f-6fe4a5115bb4" />
+<img width="1888" height="617" alt="image" src="https://github.com/user-attachments/assets/06089ea4-37b5-44e8-98c1-7e331409612b" />
+<img width="1916" height="617" alt="image" src="https://github.com/user-attachments/assets/a1558cc8-34a0-4426-aebf-45913c923a27" />
+<img width="909" height="594" alt="image" src="https://github.com/user-attachments/assets/f7636d6f-e818-4cde-b7a5-6147cebdb94a" />
 
 
 
