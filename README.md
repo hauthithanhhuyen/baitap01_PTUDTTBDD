@@ -88,6 +88,9 @@ Sửa file
 <img width="909" height="594" alt="image" src="https://github.com/user-attachments/assets/f7636d6f-e818-4cde-b7a5-6147cebdb94a" />
 Chuyển sang
 <img width="1889" height="1044" alt="image" src="https://github.com/user-attachments/assets/1b998c6c-bbed-473d-9bcf-96f7ba5224e4" />
+<img width="1469" height="361" alt="image" src="https://github.com/user-attachments/assets/56a17d98-65ea-4648-b4e9-4c4f56bd7aaf" />
+Lấy token
+<img width="1463" height="206" alt="image" src="https://github.com/user-attachments/assets/049b3e1c-b9f6-4d41-922a-9a21065f8117" />
 
 
 
