@@ -91,6 +91,12 @@ Chuyển sang
 <img width="1469" height="361" alt="image" src="https://github.com/user-attachments/assets/56a17d98-65ea-4648-b4e9-4c4f56bd7aaf" />
 Lấy token
 <img width="1463" height="206" alt="image" src="https://github.com/user-attachments/assets/049b3e1c-b9f6-4d41-922a-9a21065f8117" />
+# Chạy Cloudflare Tunnel dưới dạng service
+cài đặt cloudflared service install
+<img width="1910" height="492" alt="image" src="https://github.com/user-attachments/assets/e0a10bb7-7d16-46bc-bda7-d00efdcfaa9c" />
+# Đưa lên https://app.hauthanhhuyen.id.vn
+<img width="1630" height="791" alt="image" src="https://github.com/user-attachments/assets/b474d6f0-6c48-4438-aece-e5ec7e227ab1" />
+<img width="1649" height="843" alt="image" src="https://github.com/user-attachments/assets/9f24a666-48fb-4a1e-bd5b-e701f400fc1a" />
 
 
 
