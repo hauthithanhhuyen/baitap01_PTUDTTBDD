@@ -97,6 +97,58 @@ cài đặt cloudflared service install
 # Đưa lên https://app.hauthanhhuyen.id.vn
 <img width="1630" height="791" alt="image" src="https://github.com/user-attachments/assets/b474d6f0-6c48-4438-aece-e5ec7e227ab1" />
 <img width="1649" height="843" alt="image" src="https://github.com/user-attachments/assets/9f24a666-48fb-4a1e-bd5b-e701f400fc1a" />
+# 1. Tại sao dùng Nginx làm Reverse Proxy thay vì trỏ thẳng Tunnel vào Node-RED?
+Nginx đóng vai trò trung gian giúp định tuyến và quản lý nhiều dịch vụ thông qua một điểm truy cập duy nhất. Khi sử dụng Nginx, ta có thể:
+Phân chia đường dẫn (ví dụ: /api, /nodered)
+Tăng bảo mật và kiểm soát truy cập
+Tối ưu hiệu năng (cache, static file)
+Nếu trỏ trực tiếp Tunnel vào Node-RED thì chỉ expose được một dịch vụ duy nhất, khó mở rộng và quản lý hệ thống.
+# 2. Sự khác biệt giữa Mount file và Mount thư mục trong Docker
+Mount file: ánh xạ một file cụ thể từ máy host vào container → dùng cho cấu hình riêng lẻ.
+Mount thư mục: ánh xạ toàn bộ thư mục → dùng cho project hoặc dữ liệu lớn.
+👉 Mount file giúp kiểm soát chi tiết, còn mount thư mục tiện cho phát triển và đồng bộ dữ liệu.
+# 3. Sửa file index.html trên Ubuntu có cập nhật web ngay không? Tại sao?
+Có, nội dung sẽ thay đổi ngay lập tức.
+Vì Docker sử dụng cơ chế bind mount, nên Nginx đọc trực tiếp file từ máy host. Khi file trên host thay đổi, container cũng thấy thay đổi ngay mà không cần build lại.
 
+# 4. restart: always và restart: unless-stopped để làm gì?
+always: container luôn tự khởi động lại khi bị dừng hoặc khi hệ thống reboot.
+unless-stopped: tương tự nhưng nếu người dùng chủ động dừng thì sẽ không tự chạy lại.
+- Giúp đảm bảo hệ thống luôn hoạt động ổn định.
+# 5. Khai báo các service dùng chung network và lợi ích
+Khai báo:
+networks:
+  mynetwork:
+services:
+  nginx:
+    networks:
+      - mynetwork
+  nodered:
+    networks:
+      - mynetwork
+  myapi:
+    networks:
+      - mynetwork
+# Lợi ích:
+Các container giao tiếp với nhau bằng tên service thay vì IP
+Dễ cấu hình, dễ mở rộng
+Tăng tính ổn định và tách biệt mạng
+# 6. Đưa Cloudflare Token vào .env và thêm vào .gitignore
+Lưu token trong .env:
+CF_TOKEN=xxxxxx
+Sử dụng trong docker-compose:
+command: tunnel run --token ${CF_TOKEN}
+Thêm .env vào .gitignore
+-Điều này quan trọng vì token là thông tin nhạy cảm. Nếu bị lộ, người khác có thể chiếm quyền tunnel và truy cập hệ thống của bạn.
+# 7. Tại sao nên thêm :ro khi mount file cấu hình Nginx?
+(read-only) giúp container chỉ được đọc mà không được ghi vào file cấu hình.
+ Điều này
+Ngăn container sửa file
+Tránh lỗi hoặc tấn công làm thay đổi cấu hình
+Tăng tính bảo mật
+# 8. Dùng Cloudflare Tunnel có cần mở cổng không?
+Không cần.
+Cloudflare Tunnel tạo kết nối từ trong ra ngoài, nên không cần mở port hay cấu hình NAT/router.
+- Đây là ưu điểm lớn giúp tăng bảo mật và đơn giản hoá triển khai.
 
 
